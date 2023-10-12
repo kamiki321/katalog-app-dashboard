@@ -7,6 +7,7 @@ import Software from "../card/Software";
 import CariAplikasi from "../CariAplikasi";
 import { AplikasiSatker } from "../aplikasi/AplikasiSatker";
 import { OverviewAplikasi } from "../aplikasi/OverviewAplikasi";
+import FilteringAplikasi from "../aplikasi/FilteringAplikasi";
 
 
 function Katalog() {
@@ -28,9 +29,7 @@ function Katalog() {
         <Box sx={styles.tabHeader}>
             <Tabs value={value} onChange={handleChange}>
                 <Tab label="Overview" id='tab-0' />
-                <Tab label="Aplikasi Khusus" id='tab-1' />
-                <Tab label="Aplikasi Umum" id='tab-2' />
-                <Tab label="Cari Aplikasi" id='tab-3' />
+                <Tab label="Cari Aplikasi" id='tab-1' />
             </Tabs>
         </Box>
         <TabPanel value={value} index={0} sx={{}}>
@@ -41,26 +40,15 @@ function Katalog() {
             <OverviewAplikasi/>
             <Divider sx={styles.divider}/>
             <Typography sx={styles.pageTitle} variant="h5">Aplikasi per Satker</Typography>
-            <AplikasiSatker/>
+            <FilteringAplikasi/>
             
 
         </TabPanel>
         <TabPanel value={value} index={1}>
-        <Software/>
-
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-            <Software/>
-            {/* <Typography>Nothing yet!</Typography> */}
-        </TabPanel>
-        <TabPanel value={value} index={3}>
         <CariAplikasi/>
             {/* <Typography>Nothing yet!</Typography> */}
         </TabPanel>
-        <TabPanel value={value} index={4}>
-            
-            {/* <Typography>Nothing yet!</Typography> */}
-        </TabPanel>
+
         </Box>
         <footer>
             <Box sx={{

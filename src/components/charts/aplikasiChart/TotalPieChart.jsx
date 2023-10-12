@@ -6,11 +6,11 @@ import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 
 const data = [
-  { name: "Aplikasi Non-Pusdatin", value: 103 },
-  { name: "Aplikasi Pusdatin Kemhan", value: 54 },
+  { name: "Aplikasi Non-Pusdatin", value: 62 },
+  { name: "Aplikasi Pusdatin Kemhan", value: 47 },
 ];
 
-const COLORS = ["#474DE7", "#DBD200", ];
+const COLORS = ["#00680A", "#00980F", "#58AD60"];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({

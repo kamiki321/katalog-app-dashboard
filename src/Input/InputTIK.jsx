@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 
 
-export const InputApp = () => {
+export const InputTIK = () => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [loading, setLoading] = useState(false);
   
@@ -41,7 +41,7 @@ export const InputApp = () => {
   
     return (
       <Container>
-        <Typography variant="h6">Upload data Aplikasi Baru (.csv/xlsx)</Typography>
+        <Typography variant="h6">Upload data TIK Baru (.csv/xlsx)</Typography>
         <input
           accept="image/*"
           style={{ display: 'none' }}

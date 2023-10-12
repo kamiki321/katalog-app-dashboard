@@ -8,11 +8,11 @@ import { PieChart, Pie, Cell, Tooltip } from "recharts";
 const data = [
   { name: "Kemlu", value: 1 },
   { name: "LKPP", value: 1 },
-  { name: "Pusdatin Kemhan", value: 20 },
+  { name: "Pusdatin Kemhan", value: 17 },
 
 ];
 
-const COLORS = ["#474DE7", "#A3A6FF", "#DBD200"];
+const COLORS = ["#474DE7", "#58AD60", "#DBD200"];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({

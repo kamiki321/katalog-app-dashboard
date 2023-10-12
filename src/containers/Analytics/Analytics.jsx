@@ -1,5 +1,5 @@
 import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TabPanel from "../../components/TabPanel";
 import OverviewCharts from "./OverviewCharts";
 import TopVideosList from "./TopVideosList";
@@ -13,16 +13,37 @@ import TopFiveData from "./TopFiveData";
 
 function Analytics() {
     const [value, setValue] = useState(0);
+    const [slideIn, setSlideIn] = useState(false);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+
+    useEffect(() => {
+        // Add a delay to trigger the slide-in animation after a short delay
+        const timeoutId = setTimeout(() => {
+          setSlideIn(true);
+        }, 500); // Adjust the delay as needed
+    
+        // Clear the timeout on unmount to prevent memory leaks
+        return () => clearTimeout(timeoutId);
+      }, []);
+
+      const animationStyle = slideIn
+    ? {
+        transform: 'translateY(0)',
+        transition: 'transform 0.5s',
+      }
+    : {
+        transform: 'translateY(-100%)',
+      };
+
     return ( 
         <>
         <Helmet>
             <title>Dashboard</title>
         </Helmet>
-        <div>
+        <div style={{ ...animationStyle, position: 'relative' }} className="analytics-container">
         <Box>
             {/* <Box sx={{
                 width: 600,

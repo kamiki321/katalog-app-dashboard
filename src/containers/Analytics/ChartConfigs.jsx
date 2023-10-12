@@ -66,71 +66,105 @@ export const mainChartOptions = {
     }
 };
 
-const satker = [
+const satkerAplikasi = [
+    'Ditjen Renhan', 
     'Biro Ortala', 
-    'Biro Hukum', 
+    'Biro Turdang', 
     'Biro Umum', 
-    'Biro Peraturan Perundang-Undangan', 
-    'Biro Kepegawaian',
+    'Biro Hukum',
+    'Itjen Kemhan',
+    'Ditjen Strahan Kemhan',
+    'Ditjen Pothan Kemhan',
+    'Ditjen Kuathan Kemhan',
+    'Ditjen Baranahan Kemhan',
+    'Unhan Kemhan',
     'Biro TU dan Protokol',
-    'Badan Instalasi Strategis Pertahanan',
-    'Badan Pendidikan dan Pelatihan',
-    'Badan Sarana Pertahanan',
-    'Ditjen Kekuatan Pertahanan',
-    'Ditjen Potensi Pertahanan',
-    'Ditjen Strategi Pertahanan',
-    'Ditjen Perencanaan Pertahanan',
-    'Inspektorat Jenderal',
-    'Pusat Data dan Informasi',
-    'Pusat Rehabilitasi',
+    'Biro Kepegawaian',
     'Pusat Kelaikan',
-    'Biro Humas',
-    'Biro Renku',
-    'Balitbang',
-    'Puslapbinkuhan',
-    'Universitas Pertahanan',
+    'Badiklat Kemhan',
+    'Bainstrahan Kemhan',
+    'Pusrehab Kemhan',
+    'Pusdatin Kemhan',
 ];
 
-const number = [
+const satkerData = [
+    'Bainstrahan',
+    'Baranahan',
+    'Biro Humas',
+    'Biro Turdan',
+    'Ditjen Kuathan',
+    'Ditjen Pothan',
+    'Ditjen Strahan',
+    'Inspektorat Jendral',
+    'Pusdatin',
+    'Puslaik',
+    'Pusrehab'
+];
+
+const aplikasi = [
+    24,
     19,
     1,
-    14,
-    1,
-    6,
     17,
-    16,
-    28,
-    5,
-    18,
-    12,
-    10,
-    16,
+    1,
     3,
-    22,
-    4,
-    7,
-    9,
-    15,
-    13,
-    8,
+    12,
+    12,
+    18,
     6,
+    7,
+    17,
+    6,
+    7,
+    27,
+    16,
+    2,
+    19,
+
 ];
 
+const data = [
+    5,
+    3,
+    8,
+    1,
+    28,
+    5,
+    2,
+    4,
+    2,
+    1,
+    2,
+];
 
 export const getMainChartData = () => {
     return {
-        labels: satker,
+        labels: satkerAplikasi,
         datasets: [
             {
 
                 label: 'Value',
-                data: satker.map(() => faker.datatype.number({ min: 1, max: 30 })),
-                backgroundColor: 'rgba(161, 207, 237, 0.5)',
+                data: aplikasi,
+                backgroundColor: 'rgba(74, 29, 29, 0.8)',
                 animation: false
             },
         ],
     };
 }
 
+export const getSecondChartData = () => {
+    return {
+        labels: satkerData,
+        datasets: [
+            {
+
+                label: 'Value',
+                data: data,
+                backgroundColor: 'rgba(34, 113, 15, 0.6)',
+                animation: false
+            },
+        ],
+    };
+}
 
 

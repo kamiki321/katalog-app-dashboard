@@ -55,20 +55,20 @@ export const LoginPage = () => {
 
 
   return (
-    <div >
+    <div>
       <header>
         <LoginHeader/>
       </header>
-      <body>
-      <div sx={{
-        bgcolor:'blue'
-      }}>
+      
+      <div  sx={{
+        bgcolor: 'neutral.main'
+        }}>
 
-      <Typography  fontFamily="sans-serif" variant="h4" align="center" gutterBottom sx={styles.spacer}>
-      Selamat datang pada Katalog & Data Aplikasi  
+      <Typography  fontFamily="sans-serif" variant="h4" align="center"  sx={styles.spacer}>
+      Selamat datang pada Katalog Data Aplikasi 
       </Typography>
-      <h4  align="center" gutterBottom >  </h4>
-      <logo justifyContent="center" gutterBottom>
+      <h4  align="center"  >  </h4>
+      <logo justifycontent="center" >
         
       </logo>
       <Container maxWidth="xs">
@@ -107,7 +107,7 @@ export const LoginPage = () => {
                 color="primary"
                 fullWidth
                 onClick={()=> {
-                  // navigate('/dashboard');
+                  navigate('/dashboard');
                   if(user.loggedIn) return;
                   setUser({ loggedIn: true});
         
@@ -135,7 +135,6 @@ export const LoginPage = () => {
       </Paper>
     </Container>
     </div>
-    </body>
     <footer >
             <Box sx={{
               width: '100%',

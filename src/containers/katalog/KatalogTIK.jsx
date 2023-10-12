@@ -27,14 +27,14 @@ export const KatalogTIK = () => {
             </Tabs>
         </Box>
         <TabPanel value={value} index={0} sx={{}}>
-
+            Coming Soon...
         </TabPanel>
         <TabPanel value={value} index={1}>
-
+        Coming Soon...
 
         </TabPanel>
         <TabPanel value={value} index={2}>
-
+        Coming Soon...
             {/* <Typography>Nothing yet!</Typography> */}
         </TabPanel>
         </Box>

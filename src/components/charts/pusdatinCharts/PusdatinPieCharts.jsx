@@ -6,18 +6,12 @@ import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 
 const data = [
-  { name: "unknown", value: 3 },
-  { name: "2006", value: 1 },
-  { name: "2016", value: 1 },
-  { name: "2017", value: 3 },
-  { name: "2018", value: 2 },
-  { name: "2019", value: 6 },
-  { name: "2020", value: 4 },
-  { name: "2021", value: 5 },
-  { name: "2022", value: 31 },
+  { name: "Khusus", value: 67 },
+  { name: "Umum", value: 69 },
+
 ];
 
-const COLORS = ["#DEDEDE", "#C4C6FF", "#989CFF", "#6367E5", "#3D43CB", "#242CF9", "#252AAC", "#1E2287", "#000463"];
+const COLORS = ["#58AD60", "#76A37B"];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
@@ -48,7 +42,7 @@ const renderCustomizedLabel = ({
 export default function PusdatinPieCharts() {
   return (
     <div>
-      <Typography variant="h6"> Jumlah Aplikasi yang terdapat di Pusdatin Kemhan berdasarkan kategori Tahun Pembuatan</Typography>
+      <Typography variant="h6"> Persentase Aplikasi yang berdasarkan Jenis Aplikasi</Typography>
       <Divider sx={styles.divider}/>
     <Box 
         sx={{

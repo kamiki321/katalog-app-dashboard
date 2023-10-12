@@ -18,10 +18,11 @@ console.log(tableData);
 
 const columns = [
   {field: 'id', headerName: 'No.',  width: 30 },
-  {field: 'nama_aplikasi', headerName: 'Nama Aplikasi', width: 300 },
-  {field: 'uraian_aplikasi', headerName: 'Uraian Aplikasi', width: 650},
-  {field: 'aktif_mulai', headerName: 'aktif_mulai',width: 100 },
-  {field: 'provider', headerName: 'Provider', width: 200 },
+  {field: 'title', headerName: 'Nama Aplikasi', width: 300 },
+  {field: 'content', headerName: 'Uraian Aplikasi', width: 650},
+  {field: 'jenis_aplikasi', headerName: 'Jenis Aplikasi',width: 150 },
+  {field: 'pemilik_aplikasi', headerName: 'Pemilik Aplikasi', width: 200 },
+  {field: 'pengguna_aplikasi', headerName: 'Pengguna Aplikasi', width: 200 },
 
 ]
   return (

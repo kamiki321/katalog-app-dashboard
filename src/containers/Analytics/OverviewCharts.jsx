@@ -1,35 +1,35 @@
 
 import { Line } from 'react-chartjs-2';
 import { AppBar, Box, Tab, Tabs } from '@mui/material';
-import { getMainChartData, mainChartOptions } from './ChartConfigs';
+import { getMainChartData, getSecondChartData, mainChartOptions } from './ChartConfigs';
 import { useState } from 'react';
 import TabPanel from '../../components/TabPanel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArrowDropDownCircleSharpIcon from '@mui/icons-material/ArrowDropDownCircleSharp';
 import AnalyticsTabHead from './AnalyticsTabHead';
 import { forwardRef } from 'react';
-import { AppBlocking, AppShortcutSharp, AppsOutlined, AppsRounded, AppsTwoTone, HardwareOutlined } from '@mui/icons-material';
+import { AppBlocking, AppShortcutSharp, AppsOutlined, AppsRounded, AppsTwoTone, Folder, HardwareOutlined } from '@mui/icons-material';
 
 
-const ViewsTabHead = forwardRef((props, ref) => <AnalyticsTabHead {...props}
+const AplikasiTabHead = forwardRef((props, ref) => <AnalyticsTabHead {...props}
     title='Aplikasi'
     ref={ref}
-    icon={<AppShortcutSharp />}
-    value='157' subtitle={'157 Total Aplikasi'} />);
+    icon={<AppShortcutSharp color='green' />}
+    value='232' subtitle={'232 Total Aplikasi'} />);
 
-const WatchTimeTabHead = forwardRef((props, ref) => <AnalyticsTabHead {...props}
+const DataTabHead = forwardRef((props, ref) => <AnalyticsTabHead {...props}
     title='Data'
     ref={ref}
-    icon={<AppsOutlined color='green'/>}
+    icon={<Folder color='green'/>}
     value='61' subtitle={'61 Total Data '} />);
 
-const SubscribersTabHead = forwardRef((props, ref) => <AnalyticsTabHead {...props}
+const SoftTabHead = forwardRef((props, ref) => <AnalyticsTabHead {...props}
     ref={ref}
     title='Software' 
-    icon={<AppsOutlined color='red' />}
+    icon={<AppsOutlined color='green' />}
     value='-' subtitle={'- Total Software'} />);
 
-const RevenueTabHead = forwardRef((props, ref) => <AnalyticsTabHead {...props}
+const HardTabHead = forwardRef((props, ref) => <AnalyticsTabHead {...props}
     ref={ref}
     title='Hardware'
     icon={<HardwareOutlined color='green'  />}
@@ -45,10 +45,10 @@ function OverviewCharts() {
 
     return <Box sx={styles.container}>
         <Tabs value={value} onChange={handleChange}>
-            <Tab component={ViewsTabHead} id='tab-0' />
-            <Tab component={WatchTimeTabHead} id='tab-1' />
-            <Tab component={SubscribersTabHead} id='tab-2' />
-            <Tab component={RevenueTabHead} id='tab-3' />
+            <Tab component={AplikasiTabHead} id='tab-0' />
+            <Tab component={DataTabHead} id='tab-1' />
+            <Tab component={SoftTabHead} id='tab-2' />
+            <Tab component={HardTabHead} id='tab-3' />
         </Tabs>
 
         <TabPanel value={value} index={0} mt={0}>
@@ -58,7 +58,7 @@ function OverviewCharts() {
         </TabPanel>
         <TabPanel value={value} index={1} mt={0}>
             <Box sx={styles.mainChart}>
-                <Line options={mainChartOptions} data={getMainChartData()} />
+                <Line options={mainChartOptions} data={getSecondChartData()} />
             </Box>
         </TabPanel>
         <TabPanel value={value} index={2} mt={0}>

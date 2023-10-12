@@ -2,6 +2,9 @@ import { Box, Card, CardContent, Divider, Tab, Tabs, Typography } from "@mui/mat
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import TabPanel from "../components/TabPanel";
+import { InputApp } from "./InputApp";
+import { InputData } from "./InputData";
+import { InputTIK } from "./InputTIK";
 
 
 export const Input = () => {
@@ -28,15 +31,13 @@ export const Input = () => {
             </Tabs>
         </Box>
         <TabPanel value={value} index={0} sx={{}}>
-
+            <InputData/>
         </TabPanel>
         <TabPanel value={value} index={1}>
-
-
+            <InputApp/>
         </TabPanel>
         <TabPanel value={value} index={2}>
-
-            {/* <Typography>Nothing yet!</Typography> */}
+            <InputTIK/>
         </TabPanel>
         </Box>
         <footer>

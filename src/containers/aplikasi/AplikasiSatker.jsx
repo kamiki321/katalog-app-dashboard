@@ -24,7 +24,7 @@ export const AplikasiSatker = () => {
       <Box sx={styles.tabHeader}>
         <Tabs value={value}onChange={handleChange}>
           <Tab label="Pusdatin" id='tab-0' />
-          <Tab label="Universitas Pertahanan" id='tab-1' />
+          {/* <Tab label="Universitas Pertahanan" id='tab-1' /> */}
           {/* <Tab label="Balitbang" id='tab-2' />
           <Tab label="Biro Hukum" id='tab-3' /> */}
           {/* <Tab label="Biro Humas" {...a11yProps(4)} />

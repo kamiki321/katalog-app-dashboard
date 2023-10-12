@@ -33,14 +33,11 @@ function KatalogData() {
                 <Tabs value={value} onChange={handleChange}>
                     <Tab label="Semua Data" id='tab-0' />
                     <Tab label="Per Satker" id='tab-1' />
-                    <Tab label="Data Khusus" id='tab-3' />
-                    <Tab label="Data Umum" id='tab-3' />
+
+
                 </Tabs>
             </Box>
                 <TabPanel value={value} index={0} sx={{}}>
-                    {/* <ColorText color="neutral.normal">
-                        <Typography variant="h7">Lorem Ipsum</Typography>
-                    </ColorText> */}
                     <CariPage/>
 
                 </TabPanel>
@@ -70,18 +67,7 @@ function KatalogData() {
 
 
                 </TabPanel>
-                <TabPanel value={value} index={2}>
-                        <Software/>
-                    {/* <Typography>Nothing yet!</Typography> */}
-                </TabPanel>
-                <TabPanel value={value} index={3}>
-                    <Software/>
-                    {/* <Typography>Nothing yet!</Typography> */}
-                </TabPanel>
-                <TabPanel value={value} index={4}>
-                    <Software/>
-                    {/* <Typography>Nothing yet!</Typography> */}
-                </TabPanel>
+
         </Box>
         <footer>
             <Box sx={{

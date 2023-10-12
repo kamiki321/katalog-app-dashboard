@@ -15,21 +15,17 @@ import {
 
 const data = [
   {
-    name: "NON-PUSDATIN",
+    name: "Non-Pusdatin",
     aplikasi: 2
   },
   {
-    name: "PUSDATIN",
-    aplikasi: 54
+    name: "Dimiliki Pusdatin",
+    aplikasi: 47
   },
   {
-    name: "DIGUNAKAN",
-    aplikasi: 22
+    name: "Digunakan Pusdatin",
+    aplikasi: 19
   },
-  {
-    name: "TOTAL APLIKASI",
-    aplikasi: 56
-  }
 ];
 
 export default function SecondBar() {
